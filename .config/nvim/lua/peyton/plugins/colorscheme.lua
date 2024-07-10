@@ -5,7 +5,7 @@ return {
   config = function()
     require("catppuccin").setup {
       color_overrides = {
-        -- a custom version of the paradise colorscheme
+        -- a custom/extended version of the paradise colorscheme
         macchiato = {
           rosewater = "#d9b3ae",
           flamingo  = "#cfa09a",
