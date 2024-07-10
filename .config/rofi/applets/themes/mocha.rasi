@@ -1,0 +1,18 @@
+* {
+  base00: #1e1e2eFF; /* default backgroud */
+  base01: #313244FF; /* lighter background */
+  base02: #45475aFF; /* selection background */
+  base03: #585b70FF; /* comments, invisibles */
+  base04: #7f849cFF; /* dark foreground */
+  base05: #cdd6f4FF; /* default foreground */
+  base06: #bac2deFF; /* light foreground */
+  base07: #9399b2FF; /* light background */
+  base08: #f38ba8FF; /* red */
+  base09: #fab387FF; /* orange */
+  base0A: #f9e2afFF; /* yellow */
+  base0B: #a6e3a1FF; /* green */
+  base0C: #94e2d5FF; /* teal */
+  base0D: #89b4faFF; /* blue */
+  base0E: #b4befeFF; /* purple */
+  base0F: #6c7086FF; /* gray */
+}

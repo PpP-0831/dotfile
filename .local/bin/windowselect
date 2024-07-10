@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+sleep 0.1
+
+TOFI_CONFIG=$HOME/.config/tofi/windowselect
+# Grep window titles from "hyprctl clients"
+TITLES=$(hyprctl clients | grep -oP 'title: \K.*')
+EDITEDTITLES=""
+
+# Cut the title if it is longer than 20 characters and replace that with ...
+while IFS= read -r line; do
+  if [ ${#line} -gt 20 ]; then
+    truncated_line=$(echo "$line" | cut -c 1-20)"..."
+    EDITEDTITLES="$EDITEDTITLES$truncated_line\n"
+  else
+    EDITEDTITLES="$EDITEDTITLES$line\n"
+  fi
+done <<< $TITLES
+
+# Use tofi to choose from the edited(cutted) titles
+CHOSEN=$(printf "$EDITEDTITLES" | tofi --config $TOFI_CONFIG)
+
+# Search through the output of "hyprctl clients" for titles and workspaces
+# And check which of the title include the tofi result
+# Then use "hyprctl dispatch workspace" to go to that workspace
+while IFS= read -r line; do
+  if [[ $line =~ ^Window ]]; then
+    title=""
+    workspace=""
+  elif [[ $line =~ ^[[:space:]]+workspace:\ ([0-9]+)\ \((.*)\)$ ]]; then
+    workspace="${BASH_REMATCH[1]}"
+  elif [[ $line =~ ^[[:space:]]+title:\ (.*)$ ]]; then
+    title="${BASH_REMATCH[1]}"
+
+    if [ ! -z "$CHOSEN" ] && [[ $title =~ $(echo $CHOSEN | cut -c 1-20) ]]; then
+      hyprctl dispatch workspace $workspace
+      exit 0
+    fi
+  fi
+done <<< $(hyprctl clients)

@@ -1,0 +1,18 @@
+* {
+  base00: #111111FF;
+  base01: #1F1F1FFF;
+  base02: #2E2E2EFF;
+  base03: #424242FF;
+  base04: #BBB6B6FF;
+  base05: #E8E3E3FF;
+  base06: #E8E3E3FF;
+  base07: #E8E3E3FF;
+  base08: #B66467FF;
+  base09: #D9BC8CFF;
+  base0A: #D9BC8CFF;
+  base0B: #8C977DFF;
+  base0C: #8AA6A2FF;
+  base0D: #8DA3B9FF;
+  base0E: #A988B0FF;
+  base0F: #BBB6B6FF;
+}

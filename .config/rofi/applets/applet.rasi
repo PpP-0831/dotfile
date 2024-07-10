@@ -1,0 +1,130 @@
+configuration {
+  show-icons: false;
+  font: "JetBrains Mono Nerd Font 14";
+}
+
+@import "themes/paradise.rasi"
+
+window {
+  transparency: "real";
+  location: center;
+  anchor: center;
+  fullscreen: false;
+  width: 800px;
+  border: 2px solid;
+  border-color: @base0E;
+  cursor: "default";
+  background-color: @base00;
+}
+
+mainbox {
+  enabled: true;
+  spacing: 15px;
+  margin: 0px;
+  padding: 30px;
+  background-color: transparent;
+  children: [ "inputbar", "message", "listview" ];
+}
+
+inputbar {
+    enabled:                     true;
+    spacing:                     10px;
+    padding:                     0px;
+    border:                      0px;
+    border-radius:               0px;
+    border-color:                @base0D;
+    background-color:            transparent;
+    text-color:                  @base05;
+    children:                    [ "textbox-prompt-colon", "prompt"];
+}
+
+textbox-prompt-colon {
+    enabled:                     true;
+    expand:                      false;
+    str:                         " ";
+    padding:                     10px 13px;
+    border-radius:               0px;
+    background-color:            @base08;
+    text-color:                  @base00;
+}
+prompt {
+    enabled:                     true;
+    padding:                     10px;
+    border-radius:               0px;
+    background-color:            @base0B;
+    text-color:                  @base00;
+}
+
+/*****----- Message -----*****/
+message {
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     10px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @base0D;
+    background-color:            @base01;
+    text-color:                  @base05;
+}
+textbox {
+    background-color:            inherit;
+    text-color:                  inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     6;
+    lines:                       1;
+    cycle:                       true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    
+    spacing:                     15px;
+    background-color:            transparent;
+    cursor:                      "default";
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    padding:                     30px 10px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @base0D;
+    background-color:            transparent;
+    text-color:                  @base05;
+    cursor:                      pointer;
+}
+element-text {
+    font:                        "JetBrains Mono Nerd Font 30";
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}
+
+element normal.normal,
+element alternate.normal {
+    background-color:            var(base01);
+    text-color:                  var(base05);
+}
+element normal.urgent,
+element alternate.urgent,
+element selected.active {
+    background-color:            var(base08);
+    text-color:                  var(base00);
+}
+element normal.active,
+element alternate.active,
+element selected.urgent {
+    background-color:            var(base0B);
+    text-color:                  var(base00);
+}
+element selected.normal {
+    background-color:            var(base0D);
+    text-color:                  var(base00);
+}

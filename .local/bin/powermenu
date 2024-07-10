@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+sleep 0.1
+
+TOFI_CONFIG=$HOME/.config/tofi/powermenu
+CHOSEN=$(printf "Lock\nSuspend\nLogout\nShutdown\nReboot" | tofi --config $TOFI_CONFIG)
+
+case "$CHOSEN" in
+  "Lock") hyprlock ;;
+  "Suspend") (sleep 1; systemctl suspend) & hyprlock ;;
+  "Logout") hyprctl dispatch exit ;;
+  "Shutdown") systemctl poweroff ;;
+  "Reboot") systemctl reboot ;;
+  *) exit 0 ;;
+esac

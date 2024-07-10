@@ -1,0 +1,99 @@
+Fonts:
+  - adobe-source-han-sans-tw-fonts
+  - noto-fonts-cjk
+  - ttf-font-awesome
+  - ttf-jetbrains-mono-nerd
+
+WindowManager:
+  - hyprland
+  - hyprlock
+  - hyprpaper
+  - hyprpicker
+  - xdg-desktop-portal-hyprland
+  - xdg-utils
+
+CommandLineTools:
+  - kitty
+  - fd
+  - fzf
+  - git
+  - git-lfs
+  - jq
+  - lsd
+  - zsh
+  - yazi
+  - starship
+  - btop
+  - fastfetch
+  - lazygit
+  - man-db
+  - gum
+  - playerctl
+  - pamixer
+  - alsa-utils
+  - brightnessctl
+  - neovim
+  - zoxide
+
+Theming:
+  - catppuccin-gtk-theme-mocha
+  - qogir-icon-theme
+  - papirus-icon-theme
+
+Development:
+  - vulkan-intel
+  - clang
+  - cmake
+  - make
+  - cargo
+  - nodejs
+  - npm
+  - glfw
+  - glm
+  - go
+  - libxcb
+  - libxinerama
+  - sfml
+
+Minecraft:
+  - prismlauncher
+  - jdk21-openjdk
+
+InputMethod:
+  - fcitx5-chewing
+  - fcitx5-configtool
+
+Utilities:
+  - xz
+  - libnotify
+  - file
+  - unzip
+  - wl-clipboard
+  - wget
+  - ripgrep
+  - grim
+  - slurp
+  - bluez
+  - bluez-utils
+  - rsync
+  - qt5-base
+  - qt5-wayland
+  - qt6-wayland
+  - dosfstools
+  - ffmpegthumbailer
+  - unarchiver
+  - poppler
+
+Customization:
+  - swaync
+  - stow
+  - tofi
+
+DesktopApplications:
+  - discord
+  - librewolf-bin
+  - neovide
+  - obs-studio
+  - pavucontrol
+  - obsidian
+  - spotify

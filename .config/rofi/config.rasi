@@ -1,0 +1,5 @@
+configuration {
+  modes: "drun,run,filebrowser,window";
+  font: "JetBrainsMono Nerd Font 14";
+  case-sensitive: false;
+}

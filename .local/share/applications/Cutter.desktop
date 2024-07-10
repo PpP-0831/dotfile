@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Cutter
+Comment=Free and Open Source RE Platform powered by Rizin
+Exec=/home/peyton/AppImages/Cutter-v2.3.4-Linux-x86_64.AppImage
+Terminal=false

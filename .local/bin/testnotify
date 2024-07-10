@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+notify-send "This is CRITICAL" -u critical
+notify-send "This is NORMAL" -u normal
+notify-send "This is LOW" -u low
