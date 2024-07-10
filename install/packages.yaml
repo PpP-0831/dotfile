@@ -29,6 +29,7 @@ CommandLineTools:
   - man-db
   - gum
   - playerctl
+  - pacman-contrib
   - pamixer
   - alsa-utils
   - brightnessctl
