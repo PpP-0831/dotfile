@@ -110,7 +110,7 @@ InstallPackages() {
     return
   fi
 
-  sudo paru --noconfirm -S "${installList[@]}"
+  paru --noconfirm -S "${installList[@]}"
 }
 
 InstallPackages "${packages[@]}"
@@ -137,20 +137,20 @@ fi
 
 pushd ~/Dotfiles > /dev/null
 stow . --adopt
-popd > /dev/null
 git restore .
+popd > /dev/null
 
 
 # =====================================
 # Post Installation Setup
 # =====================================
 
-echo ":: Installing tree-sitter-cli..."
-cargo install tree-sitter-cli
-
 echo ":: Enabling bluetooth..."
 systemctl enable bluetooth
 systemctl start bluetooth
+
+echo ":: Installing Zinit..."
+bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
 
 if gum confirm "Do you want to set zsh as the default login shell?"; then
   chsh -s /usr/bin/zsh

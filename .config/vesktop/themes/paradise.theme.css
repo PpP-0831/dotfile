@@ -1,0 +1,42 @@
+/**
+ * @name Paradise
+ * @description Allows you to customize Discord's native Color Scheme
+ * @author DevilBro
+ * @version 1.0.0
+ * @authorId 278543574059057154
+ * @invite Jx3TjNS
+ * @donate https://www.paypal.me/MircoWittrien
+ * @patreon https://www.patreon.com/MircoWittrien
+ * @website https://mwittrien.github.io/
+ * @source https://github.com/mwittrien/BetterDiscordAddons/tree/master/Themes/DiscordRecolor/
+ * @updateUrl https://mwittrien.github.io/BetterDiscordAddons/Themes/DiscordRecolor/DiscordRecolor.theme.css
+**/
+
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/DiscordRecolor/DiscordRecolor.css);
+
+:root {
+  --settingsicons: 1;
+  --font: "gg sans";
+
+  --accentcolor: 66, 66, 66;           /* #424242 */
+  --accentcolor2: 52, 52, 52;          /* #343434 */
+  --linkcolor: 119, 155, 207;          /* #8D9FB9 */
+  --mentioncolor: 217, 188, 140;       /* #D9BC8C */
+  --successcolor: 156, 190, 109;       /* #8C977D */
+  --warningcolor: 220, 159, 120;       /* #C7987A */
+  --dangercolor: 197, 85, 89;          /* #B66467 */
+
+  --textbrightest: 232, 227, 227;      /* #E8E3E3 */
+  --textbrighter: 232, 227, 227;       /* #D6D2D2 */
+  --textbright: 196, 193, 193;         /* #C4C1C1 */
+  --textdark: 187, 182, 182;           /* #BBB6B6 */
+  --textdarker: 160, 159, 159;         /* #A09F9F */
+  --textdarkest: 142, 142, 142;        /* #8E8E8E */
+
+  --backgroundaccent: 25, 25, 25;
+  --backgroundprimary: 17, 17, 17;
+  --backgroundsecondary: 20, 20, 20;
+  --backgroundsecondaryalt: 15, 15, 15;
+  --backgroundtertiary: 10, 10, 10;
+  --backgroundfloating: 1, 1, 1;
+}

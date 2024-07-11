@@ -26,6 +26,7 @@ vim.opt.clipboard:append("unnamedplus")
 -- split windows
 vim.opt.splitright = true
 vim.opt.splitbelow = true
+vim.opt.laststatus = 3
 
 -- folding
 vim.opt.foldmethod = "indent"

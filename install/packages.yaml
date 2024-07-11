@@ -55,6 +55,9 @@ Development:
   - libxcb
   - libxinerama
   - sfml
+  - python-installer
+  - python-build
+  - python-psutil
 
 Minecraft:
   - prismlauncher
@@ -72,6 +75,7 @@ Utilities:
   - wl-clipboard
   - wget
   - ripgrep
+  - luarocks
   - grim
   - slurp
   - bluez
@@ -81,14 +85,15 @@ Utilities:
   - qt5-wayland
   - qt6-wayland
   - dosfstools
-  - ffmpegthumbailer
+  - ffmpegthumbnailer
   - unarchiver
   - poppler
 
 Customization:
-  - swaync
   - stow
   - tofi
+  - rofi-wayland
+  - python-fabric-git
 
 DesktopApplications:
   - discord
