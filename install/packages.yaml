@@ -88,6 +88,7 @@ Utilities:
   - ffmpegthumbnailer
   - unarchiver
   - poppler
+  - openssh
 
 Customization:
   - stow

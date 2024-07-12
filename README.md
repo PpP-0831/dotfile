@@ -1,4 +1,4 @@
-# HyprPuter - Hyprland on my Computer
+# My Dotfiles.
 
 ## Installation
 
@@ -69,3 +69,39 @@ Add this line to `~/.config/discord/settings.json`:
 ```json
 "SKIP_HOST_UPDATE": true
 ```
+
+### GitHub Authentication
+For further information, go to the [GitHub Authentication Documentation](https://docs.github.com/en/authentication)
+
+#### Checking for existing SSH keys
+1. See if existing SSH keys are present: `ls -al ~/.ssh`
+2. Check the directory listing to see if you already have a public SSH key
+	* The filenames of supported public keys for GitHub are one of the following:
+		* _id_rsa.pub_
+		* _id_ecdsa.pub_
+		* _id_ed25519.pub_
+
+#### Generating a new SSH key
+1. Create a new SSH key: `ssh-keygen -t ed25519 -C "your_email@example.com"`
+	* This creates a new SSH key, using the provided email as a label
+2.  When you're prompted to "Enter a file in which to save the key", press Enter to accept the default file location
+3. At the prompt, type a secure passphrase (or empty for no passphrase)
+
+#### Adding your SSH key to the ssh-agent
+1. Start the ssh-agent in the background: `eval "$(ssh-agent -s)"`
+2. Add your SSH private key to the ssh-agent: `ssh-add ~/.ssh/id_ed25519`
+3. Add the SSH pulic key to your GitHub account
+
+#### Adding a new SSH key to your GitHub account
+1. Copy the SSH public key to your clipboard: `cat ~/.ssh/id_ed25519.pub`
+	* Select and copy the output of the command
+2. At [github.com](https://github.com), click your profile photo, then go to **Settings**
+3. Go to **SSH and GPG keys** and click **New SSH key**
+4. In the "Title" field, add a descriptive label for the new key
+	* Eg. "Personal Laptop"
+5. In the "Key" field, paste your public key
+6. Click **Add SSH key**
+
+#### Testing your SSH connection
+1. Run `ssh -T git@github.com`
+2. Verify that the resulting message contains your username
