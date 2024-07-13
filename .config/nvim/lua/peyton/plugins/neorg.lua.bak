@@ -9,6 +9,7 @@ return {
     dependencies = { "luarocks.nvim" },
     lazy = true,
     cmd = "Neorg",
+    ft = { "norg" },
     keys = {
       { "<leader>nn", "<CMD>Neorg index<CR>", desc = "Open Neorg index file" },
       { "<leader>nj", "<CMD>Neorg journal today<CR>", desc = "Open today's Neorg journal" },
@@ -20,6 +21,7 @@ return {
           ["core.defaults"] = {},
           ["core.summary"] = {},
           ["core.integrations.nvim-cmp"] = {},
+          ["core.ui.calendar"] = {},
           ["core.concealer"] = {
             config = {
               icons = {
@@ -60,8 +62,6 @@ return {
           },
         },
       })
-
-      vim.cmd("autocmd BufRead,BufNewFile *.norg setlocal conceallevel=2")
     end
   }
 }
